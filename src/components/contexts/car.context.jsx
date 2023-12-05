@@ -27,9 +27,11 @@ export const CarsProvider = ({ children }) => {
       return;
     }
     setLoading(true);
+    
+    const readAllCarsEndpoint = `${CARS_ENDPOINT}read-all-cars`
     try {
-      console.log(`fetching from ${CARS_ENDPOINT}`);
-      const response = await fetch(CARS_ENDPOINT);
+      console.log(`fetching from ${readAllCarsEndpoint}`);
+      const response = await fetch(readAllCarsEndpoint);
       if (!response.ok) {
         throw response;
       }

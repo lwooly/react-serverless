@@ -1,2 +1,2 @@
-export const CARS_ENDPOINT = "https://carsapp2050.fly.dev/api/v1/cars";
+export const CARS_ENDPOINT = "https://superlative-shortbread-33f230.netlify.app/.netlify/functions/";
 export const STORAGE_KEY = 'cars'
