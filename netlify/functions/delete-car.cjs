@@ -3,7 +3,7 @@ const Car = require("../../api/models/car.model.cjs");
 const middleware = require('../../api/middleware/index.cjs')
 
 
-const { standardAPIHeaders: headers, getIDFromURL } = require("./../../api/utils/index");
+const { standardAPIHeaders: headers, getIDFromURL } = require("../../api/utils/index");
 
 const handler = async (event, context) => {
   if(event.httpMethod.toUpperCase() !== 'DELETE') {
