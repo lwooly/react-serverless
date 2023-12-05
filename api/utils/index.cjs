@@ -6,4 +6,4 @@ const standardAPIHeaders = {
   "Access-Control-Allow-Origin": "*",
 };
 
-exports.standardAPIHeaders = standardAPIHeaders;
+exports.standardAPIHeaders  = standardAPIHeaders;

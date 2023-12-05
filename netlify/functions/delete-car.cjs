@@ -1,6 +1,6 @@
-const dbConnect = require("../../api/db");
-const Car = require("../../api/models/car.model");
-const middleware = require('./../../api/middleware/index')
+const dbConnect = require("../../api/db.cjs");
+const Car = require("../../api/models/car.model.cjs");
+const middleware = require('../../api/middleware/index.cjs')
 
 
 const { standardAPIHeaders: headers, getIDFromURL } = require("./../../api/utils/index");

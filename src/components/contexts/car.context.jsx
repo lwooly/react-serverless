@@ -28,9 +28,9 @@ export const CarsProvider = ({ children }) => {
     }
     setLoading(true);
     
-    const readAllCarsEndpoint = `${CARS_ENDPOINT}read-all-cars`
+    const readAllCarsEndpoint = `/.netlify/functions/read-all-cars`
     try {
-      console.log(`fetching from ${readAllCarsEndpoint}`);
+      // console.log(`fetching from ${readAllCarsEndpoint}`);
       const response = await fetch(readAllCarsEndpoint);
       if (!response.ok) {
         throw response;
@@ -54,7 +54,7 @@ export const CarsProvider = ({ children }) => {
         delete formData.avatar_url;
       }
       try {
-        const response = await fetch(CARS_ENDPOINT, {
+        const response = await fetch(`/.netlify/functions/create-car`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -104,7 +104,7 @@ export const CarsProvider = ({ children }) => {
       }
 
       try {
-        const response = await fetch(`${CARS_ENDPOINT}/${id}`, {
+        const response = await fetch(`/.netlify/functions/update-car/${id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -150,7 +150,7 @@ export const CarsProvider = ({ children }) => {
     async (id) => {
       let deletedCar = null;
       try {
-        const response = await fetch(`${CARS_ENDPOINT}/${id}`, {
+        const response = await fetch(`/.netlify/functions/delete-car/${id}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",

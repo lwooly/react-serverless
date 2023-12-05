@@ -1,4 +1,4 @@
-const parseJSON = require("./parse-json");
+const parseJSON = require("./parse-json.cjs");
 module.exports = {
   wares: [parseJSON],
   use(event){

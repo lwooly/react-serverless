@@ -1,10 +1,10 @@
-const dbConnect = require("../../api/db");
-const Car = require("../../api/models/car.model");
+const dbConnect = require("../../api/db.cjs");
+const Car = require("../../api/models/car.model.cjs");
 const {
   standardAPIHeaders: headers,
   getIDFromURL,
 } = require("./../../api/utils/index");
-const middleware = require('./../../api/middleware/index')
+const middleware = require('../../api/middleware/index.cjs')
 
 
 const handler = async (event, context) => {
