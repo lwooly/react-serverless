@@ -3,7 +3,7 @@ const Car = require("../../api/models/car.model.cjs");
 const {
   standardAPIHeaders: headers,
   getIDFromURL,
-} = require("./../../api/utils/index");
+} = require("../../api/utils/index.cjs");
 const middleware = require('../../api/middleware/index.cjs')
 
 

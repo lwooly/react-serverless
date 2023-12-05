@@ -3,7 +3,7 @@ const Car = require("../../api/models/car.model.cjs");
 const middleware = require('../../api/middleware/index.cjs')
 
 
-const { standardAPIHeaders: headers } = require("../../api/utils/index");
+const { standardAPIHeaders: headers } = require("../../api/utils/index.cjs");
 
 const handler = async (event, context) => {
   if(event.httpMethod.toUpperCase() !== 'GET') {
